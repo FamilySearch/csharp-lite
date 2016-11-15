@@ -13,6 +13,8 @@ This project shall also replace the original [C# Family Search SDK](https://gith
 
 ## Build
 
+Most of the code exists in a single file [FamilySearchSDK.cs](https://github.com/FamilySearch/csharp-lite/blob/master/Gedcomx.Api.Lite.Core/FamilySearchSDK.cs) with supporting enumeration files Environment.cs and MediaType.cs
+
 #### Prerequisites:
 * Microsoft .NET Framework 4.6. The web installer can be downloaded here: <https://www.microsoft.com/en-us/download/details.aspx?id=48130>
 * NuGet 2.8. Instructions for installing can be found here: <http://docs.nuget.org/docs/start-here/installing-nuget>
@@ -26,21 +28,39 @@ This project shall also replace the original [C# Family Search SDK](https://gith
 
 ## Example
 
-Here's how you might use this project. 
+Here is how you might use this project. 
 
-To obtain a username, password and applicationKey refer to the [Family Search Developers Site](https://familysearch.org/developers/)
+#### Step 1
+Obtain a *username*, *password* and *applicationKey* refer to the [Family Search Developers Site](https://familysearch.org/developers/)
 
-Note that the async and await methodology is supported. For more information refer to [Microsoft's documentation on async and await](https://msdn.microsoft.com/en-us/library/hh191443(v=vs.110).aspx).
- 
+#### Step 2
+Instantiate a ``FamilySearchSDK`` Class supplying the following parameters:
+* username from step 1.
+* password from step 1.
+* application key, sometimes refered to as client key, from step 1.
+* application name,  preferably from the dev registration site, but could be anything header friendly
+* version likely a string such as 1.0.0
+* environment Enumeration such as integration (was sandbox), beta and production
 ```
 var ft = new FamilySearchSDK("username", "password", "applicationKey", "Example2.Core", "1.0.0", Gedcomx.Api.Lite.Environment.Integration);
 var response = ft.Get("/platform/tree/persons/" + personId).Result;
 Console.WriteLine(response.persons[0].display.name);
 ```
 
+#### Step 3
+Make an api call such as Get, Post, Put, Delete which returns a Task by default. Adding ``.Result`` will wait for the response. Note that the async and await methodology is encouraged. For more information refer to [Microsoft's documentation on async and await](https://msdn.microsoft.com/en-us/library/hh191443(v=vs.110).aspx).
+
+```
+var ft = new FamilySearchSDK("username", "password", "applicationKey", "Example2.Core", "1.0.0", Gedcomx.Api.Lite.Environment.Integration);
+var response = ft.Get("/platform/tree/persons/" + personId).Result;
+Console.WriteLine(response.persons[0].display.name);
+```
+#### Step 4
+Visit the [Family Search Resources](https://familysearch.org/developers/docs/api/resources) site for details on how to get, post, put and delete content from Family Search.
+
 ## Community Samples
 
-* Ancestory Map - Using the C# lite SDK, you can see a person's ancestory on a world map by clicking [coming]. It combines ASP.Net 5 Core, Google API's, d3.js and Asure. Source Code can be found at this repository: <https://www.microsoft.com/en-us/download/details.aspx?id=48130>.
+* *Ancestory Map* - Using the C# lite SDK, you can see a person's ancestory on a world map by clicking [coming]. It combines ASP.Net 5 Core, Google API's, d3.js and Asure. Source Code can be found at this repository: <https://www.microsoft.com/en-us/download/details.aspx?id=48130>.
 
 * Please contact Family Search to add more samples.
 
