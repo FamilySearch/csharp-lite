@@ -5,8 +5,8 @@ This project shall also replace the original [C# Family Search SDK](https://gith
 
 | NuGet Package Id | Purpose | Notes |
 |------------------|---------|-------|
-| **[Gedcomx.Api.Lite](TODO)** | C# Lite version to contact the Family Search GEDCOM X APIs. It will help with authentication and media types through HttpClient. | Can be used alone or along with the other Model libraries. |
-| **[Gedcomx.Api.Lite.Core](TODO)** | C# Core version of the Gedcomx.Api.Lite package. | |
+| **[Gedcomx.Api.Lite](https://www.nuget.org/packages/Gedcomx.Api.Lite/)** | C# Lite version to contact the Family Search GEDCOM X APIs. It will help with authentication and media types through HttpClient. | Can be used alone or along with the other Model libraries. |
+| **[Gedcomx.Api.Lite.Core](https://www.nuget.org/packages/Gedcomx.Api.Lite.Core/)** | C# Core version of the Gedcomx.Api.Lite package. | Can be used on Linux & Mac. See [Microsoft Documentation](https://www.microsoft.com/net/core#linuxredhat) |
 | [Gedcomx.Model](http://www.nuget.org/packages/Gedcomx.Model/) | Contains the models for GEDCOM X data. | Use this by itself to just work with the GEDCOM X models and data, and not any web services or files. |
 | [Gedcomx.Model.Fs](http://www.nuget.org/packages/Gedcomx.Model.Fs/) | Contains FamilySearch specific GEDCOM X model extensions. | Use this by itself to just work with the GEDCOM X FamilySearch extension models and data, and not any web services or files. |
 | [Gedcomx.Model.Rs](http://www.nuget.org/packages/Gedcomx.Model.Rs/) | Contains REST specific GEDCOM X model extensions. | Use this by itself to just work with the GEDCOM X REST extension models and data, and not any web services or files. (This project adds atom feed models.) |
@@ -60,7 +60,7 @@ Visit the [Family Search Resources](https://familysearch.org/developers/docs/api
 
 ## Community Samples
 
-* *Ancestory Map* - Using the C# lite SDK, you can see a person's ancestory on a world map by clicking [coming]. It combines ASP.Net 5 Core, Google API's, d3.js and Asure. Source Code can be found at this repository: <https://www.microsoft.com/en-us/download/details.aspx?id=48130>.
+* [*Ancestory Map*](http://ancestormap.azurewebsites.net/) - Using the C# lite SDK, you can see a person's ancestory on a world map by clicking [coming]. It combines ASP.Net 5 Core, Google API's, d3.js and Asure. Source Code can be found at this repository: <https://github.com/wooddani/familysearch-ancestor-map>.
 
 * Please contact Family Search to add more samples.
 
