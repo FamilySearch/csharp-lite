@@ -2,15 +2,15 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>$title$</title>
-    <authors>$author$</authors>
+    <authors>FamilySearch</authors>
     <owners>$author$</owners>
     <projectUrl>https://github.com/wooddani/familysearch-gedcomx-csharp-lite</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is the C# Lite version to contact the Family Search GEDCOM X APIs. It will help with authentication and media types through HttpClient.</description>
-    <releaseNotes>Initial release</releaseNotes>
-    <copyright>Copyright 2016</copyright>
+    <releaseNotes>Update to Proper Repo and copyright</releaseNotes>
+    <copyright>Copyright 2017</copyright>
     <tags></tags>
   </metadata>
 </package>
