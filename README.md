@@ -31,9 +31,12 @@ Most of the code exists in a single file [FamilySearchSDK.cs](https://github.com
 Here is how you might use this project. 
 
 #### Step 1
-Obtain a *username*, *password* and *applicationKey* refer to the [Family Search Developers Site](https://familysearch.org/developers/)
+Obtain a *username*, *password* and *applicationKey* refer to the [Family Search Developers Site](https://familysearch.org/developers/).
 
 #### Step 2
+Email a request (with your *applicationKey*) to devsupport@familysearch.org to enable password flow, supported for Desktop and Mobile applications. (For more information, see [https://familysearch.org/developers/docs/guides/authentication](https://familysearch.org/developers/docs/guides/authentication)).
+
+#### Step 3
 Instantiate a ``FamilySearchSDK`` Class supplying the following parameters:
 * username from step 1.
 * password from step 1.
@@ -47,7 +50,7 @@ var response = ft.Get("/platform/tree/persons/" + personId).Result;
 Console.WriteLine(response.persons[0].display.name);
 ```
 
-#### Step 3
+#### Step 4
 Make an api call such as Get, Post, Put, Delete which returns a Task by default. Adding ``.Result`` will wait for the response. Note that the async and await methodology is encouraged. For more information refer to [Microsoft's documentation on async and await](https://msdn.microsoft.com/en-us/library/hh191443(v=vs.110).aspx).
 
 ```
@@ -55,7 +58,7 @@ var ft = new FamilySearchSDK("username", "password", "applicationKey", "Example2
 var response = ft.Get("/platform/tree/persons/" + personId).Result;
 Console.WriteLine(response.persons[0].display.name);
 ```
-#### Step 4
+#### Step 5
 Visit the [Family Search Resources](https://familysearch.org/developers/docs/api/resources) site for details on how to get, post, put and delete content from Family Search.
 
 ## Community Samples
