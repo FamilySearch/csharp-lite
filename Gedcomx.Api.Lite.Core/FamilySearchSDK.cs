@@ -63,7 +63,7 @@ namespace Gedcomx.Api.Lite
 			switch (environment)
 			{
 				case Environment.Production:
-					_baseUrl = new Uri("https://familysearch.org/");
+					_baseUrl = new Uri("https://api.familysearch.org/");
 					break;
 				case Environment.Beta:
 					_baseUrl = new Uri("https://beta.familysearch.org/");
@@ -191,7 +191,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// Gets any content as a dynamic from the api route passed in by media type
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>Task containing dynamic object ready for referencing</returns>
 		public async Task<dynamic> Get(string apiRoute, MediaType mediaType = MediaType.APPLICATION_JSON)
@@ -207,7 +207,7 @@ namespace Gedcomx.Api.Lite
 		/// Gets any content as an object T from the api route passed in by media type
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>Task containing object T ready for referencing</returns>
 		public async Task<T> Get<T>(string apiRoute, MediaType mediaType = MediaType.APPLICATION_JSON)
@@ -229,7 +229,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// Puts any string content from the api route passed in by media type.
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>a dynamic object defined by the apiRoute</returns>
@@ -249,7 +249,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// Puts any string content from the api route passed in by media type.
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>an object T defined by the apiRoute</returns>
@@ -265,7 +265,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// Puts any string content from the api route passed in by media type.
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>a dynamic object defined by the apiRoute</returns>
@@ -285,7 +285,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// Posts any string content from the api route passed in by media type.
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>an object T defined by the apiRoute</returns>
@@ -301,7 +301,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// Deletes any content from the api route passed in
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <returns></returns>
 		public async Task<dynamic> Delete(string apiRoute)
 		{
@@ -320,7 +320,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// (Uncommon) Posts any string content from the api route passed in by media type. 
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>only the response portion of the message</returns>
@@ -334,7 +334,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// (Uncommon) Posts any string content from the api route passed in by media type. 
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>only the content portion of the message</returns>
@@ -350,7 +350,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// (Uncommon) Puts any string content from the api route passed in by media type. 
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>only the response portion of the message</returns>
@@ -364,7 +364,7 @@ namespace Gedcomx.Api.Lite
 		/// <summary>
 		/// (Uncommon) Puts any string content from the api route passed in by media type. 
 		/// </summary>
-		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to familysearch.org/developers/docs/api/resources</param>
+		/// <param name="apiRoute">any family search api route such as /platform/tree/persons/L11X-X11 refer to www.familysearch.org/developers/docs/api/resources</param>
 		/// <param name="content">the string content likely as a JSON string</param>
 		/// <param name="mediaType">the media type defining the type of content expected of and enumerable MediaType</param>
 		/// <returns>only the content portion of the message</returns>
