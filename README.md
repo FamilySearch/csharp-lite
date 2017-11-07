@@ -1,6 +1,6 @@
 # Welcome
 
-This C# project is intended to extend the [Family Search APIs](https://familysearch.org/developers/) using the [GEDCOM X](http://www.gedcomx.org) specifications.
+This C# project is intended to extend the [Family Search APIs](https://www.familysearch.org/developers/) using the [GEDCOM X](http://www.gedcomx.org) specifications.
 This project shall also replace the original [C# Family Search SDK](https://github.com/FamilySearch/gedcomx-csharp), however several parts of that SDK can still be utilized. The Nuget Packages are:
 
 | NuGet Package Id | Purpose | Notes |
@@ -31,10 +31,10 @@ Most of the code exists in a single file [FamilySearchSDK.cs](https://github.com
 Here is how you might use this project. 
 
 #### Step 1
-Obtain a *username*, *password* and *applicationKey* refer to the [Family Search Developers Site](https://familysearch.org/developers/).
+Obtain a *username*, *password* and *applicationKey* refer to the [Family Search Developers Site](https://www.familysearch.org/developers/).
 
 #### Step 2
-Email a request (with your *applicationKey*) to devsupport@familysearch.org to enable password flow, supported for Desktop and Mobile applications. (For more information, see [https://familysearch.org/developers/docs/guides/authentication](https://familysearch.org/developers/docs/guides/authentication)).
+Email a request (with your *applicationKey*) to devsupport@familysearch.org to enable password flow, supported for Desktop and Mobile applications. (For more information, see [https://www.familysearch.org/developers/docs/guides/authentication](https://www.familysearch.org/developers/docs/guides/authentication)).
 
 #### Step 3
 Instantiate a ``FamilySearchSDK`` Class supplying the following parameters:
@@ -59,7 +59,7 @@ var response = ft.Get("/platform/tree/persons/" + personId).Result;
 Console.WriteLine(response.persons[0].display.name);
 ```
 #### Step 5
-Visit the [Family Search Resources](https://familysearch.org/developers/docs/api/resources) site for details on how to get, post, put and delete content from Family Search.
+Visit the [Family Search Resources](https://www.familysearch.org/developers/docs/api/resources) site for details on how to get, post, put and delete content from Family Search.
 
 ## Community Samples
 
