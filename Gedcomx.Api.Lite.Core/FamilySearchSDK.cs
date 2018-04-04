@@ -66,10 +66,10 @@ namespace Gedcomx.Api.Lite
 					_baseUrl = new Uri("https://api.familysearch.org/");
 					break;
 				case Environment.Beta:
-					_baseUrl = new Uri("https://beta.familysearch.org/");
+					_baseUrl = new Uri("https://apibeta.familysearch.org/");
 					break;
 				case Environment.Integration:
-					_baseUrl = new Uri("https://integration.familysearch.org/");
+					_baseUrl = new Uri("https://api-integ.familysearch.org/");
 					break;
 				default: // Do nothing
 					throw new Exception("Unexpected environment");
